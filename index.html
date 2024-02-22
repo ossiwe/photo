@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OW Photo</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+    body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
+    body, html {
+    height: 100%;
+    color: #777;
+    line-height: 1.8;
+    }       
+
+    /* Create a Parallax Effect */
+    .bgimg-1, .bgimg-2, .bgimg-3 {
+     background-attachment: fixed;
+     background-position: center;
+      background-repeat: no-repeat;
+     background-size: cover;
+    }
+
+    /* First image (Logo. Full height) */
+    .bgimg-1 {
+    background-image: url('https://lh3.googleusercontent.com/pw/ABLVV862UOC1pPQO2h4kwkSSzH73Ift37BtUMjahuqG2yaEFmlr8dsQ191IKxjXHwZQ_mCivIcV7kcBqO9Sgr8LUx0ji6QhsF3SOsX0hj-daVd7N5vmKHEpxpBY38viMQEJmREyAwN80YELV-P-T0mGitcAL=w2106-h1582-s-no-gm?authuser=0');
+    min-height: 100%;
+    }
+
+    /* Second image (Portfolio) */
+    .bgimg-2 {
+    background-image: url("/w3images/parallax2.jpg");
+    min-height: 400px;
+    }
+
+    /* Third image (Contact) */
+    .bgimg-3 {
+    background-image: url("/w3images/parallax3.jpg");
+    min-height: 400px;
+    }
+
+    .w3-wide {letter-spacing: 10px;}
+    .w3-hover-opacity {cursor: pointer;}
+
+    /* Turn off parallax scrolling for tablets and phones */
+    @media only screen and (max-device-width: 1600px) {
+    .bgimg-1, .bgimg-2, .bgimg-3 {
+    background-attachment: scroll;
+    min-height: 400px;
+    }
+    }
+</style>
+</head>
+<body>
+
+    <div class="w3-top">
+        <div class="w3-bar" id="myNavbar">
+          <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+            <i class="fa fa-bars"></i>
+          </a>
+          <a href="#home" class="w3-bar-item w3-button">HOME</a>
+          <a href="#portfolio" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> PORTFOLIO</a>
+          <a href="#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTACT</a>
+          <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
+            <i class="fa fa-search"></i>
+          </a>
+        </div>
+
+        <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+            <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
+            <a href="#portfolio" class="w3-bar-item w3-button" onclick="toggleFunction()">PORTFOLIO</a>
+            <a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
+            <a href="#" class="w3-bar-item w3-button">SEARCH</a>
+          </div>
+        </div>
+
+        <div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
+            <div class="w3-display-middle" style="white-space:nowrap;">
+              <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">OSSI <span class="w3-hide-small">WECK</span> PHOTO</span>
+            </div>
+    </div>
+
+
+          
+    <div class="w3-content w3-container w3-padding-64" id="portfolio">
+            <h3 class="w3-center">MY WORK</h3>
+            <br><br>
+          
+            <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
+            <div class="w3-row-padding w3-center">
+              <div class="w3-col m3">
+                <img src="https://lh3.googleusercontent.com/pw/ABLVV84OblpOVEnXjAGG4-VyFfyeImXm29lTbMXvJnVhvXrOv_cw1cCn89eeLEfvlMnHctjyed3bq1G0nbaeFlZf_RvS9ZJl8Yf6vvWTlWCb-tVEskwe0uhWxBnwcsBaMdhm8hQJrL5xF2KwRHGvz_p4afJI=w2106-h1582-s-no-gm?authuser=0" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Eberswalder Station">
+              </div>
+          
+              <div class="w3-col m3">
+                <img src="https://lh3.googleusercontent.com/pw/ABLVV84B6iVghaKnuLf8kGXCjbrW4w-aLw5tnVxeofeRxzaLsV20MBdNZ9Ckwlfybt5eoRksmM9iLoIFE4qQdzdediBYTSvV6PolOTprRtW4yfAK71S0KaXYK_xy39R3hvf94Z-0W2GzFWSuLv84vJOYwQKi=w2372-h1582-s-no-gm?authuser=0" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="The hat">
+              </div>
+          
+              <div class="w3-col m3">
+                <img src="https://lh3.googleusercontent.com/pw/ABLVV85nrK4zJrF2uFLDHzGczo5plMDDv-eudwdfdcqr6wygJRA2gZ6CNtVXKzAKDMrKU4jiULqm6B0EQzaU8GnhYi1hY6hbcB5XEi3IRuY-qp6py_32jmnHB4PkZQLvVn22MtRiMc87PJTALAyg-B4s7_RX=w2106-h1582-s-no-gm?authuser=0" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="The afterparty">
+              </div>
+          
+              <div class="w3-col m3">
+                <img src="https://lh3.googleusercontent.com/pw/ABLVV86Kd6j0Bs3ojjkRb4ApujvsS0-Imncyf5u7MnqUMTSmJu-3R8YzaT-qNASPdSBuI-YQWQIytwaxcbNAxqrJoym4To6GULasALkmbE72B8l-LgWCBHa23_Pp57Qlau-7i-_ub17LCP3lHFEaOAI9-uKt=w2106-h1582-s-no-gm?authuser=0" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Columns">
+              </div>
+    </div>
+
+    <div class="w3-row-padding w3-center w3-section">
+        <div class="w3-col m3">
+          <img src="https://lh3.googleusercontent.com/pw/ABLVV84Lxdyrno_6l0c4qPQFWLZHGlbEYPUxyJLdtKbhKNz4qOmAuabPhqfdDyz4lHcPsPuFNYppXpbgvKWV349lmuWksyXlKdWYIdNoeamSL_LHkGLvb3k4x3aWPuBBUOC7E2lR6RX-gnj59e76V_JtEzt1=w2108-h1582-s-no-gm?authuser=0" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Posters">
+        </div>
+    
+        <div class="w3-col m3">
+          <img src="https://lh3.googleusercontent.com/pw/ABLVV84gn6K-x6khRVB78X7WMbOUaKyxBffQ3eDWIyYwl3jLojzspT174_0mJxOKSEaTLmIXWnfj_dywd6B2-Mt_UJDcuDdTG5TsGASpshsib7e6SrrOreGxSYI80Qktr3mYSyO-NUSTYS5OeVgUpLl6Lsnj=w2106-h1582-s-no-gm?authuser=0" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Friends">
+        </div>
+    
+        <div class="w3-col m3">
+          <img src="https://lh3.googleusercontent.com/pw/ABLVV862UOC1pPQO2h4kwkSSzH73Ift37BtUMjahuqG2yaEFmlr8dsQ191IKxjXHwZQ_mCivIcV7kcBqO9Sgr8LUx0ji6QhsF3SOsX0hj-daVd7N5vmKHEpxpBY38viMQEJmREyAwN80YELV-P-T0mGitcAL=w2106-h1582-s-no-gm?authuser=0" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Crate digging">
+        </div>
+
+        <div class="w3-col m3">
+            <img src="https://lh3.googleusercontent.com/pw/ABLVV87C0yAik46FZNCqeHcATnNq8IsBG6T8Eq_7KFW2YB1sntoWSK_Bax8OJDP7yTbef1TjFIC8mSTg1VQANfL8FkQV70fk4jPElvGhbBlJqSIxo7AeUUaWswHMO4bMpzz0oiDy1BNIHT-i684d8Z9Xxuiv=w2108-h1582-s-no-gm?authuser=0" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Gypsy lady">
+        </div>
+    </div>
+
+    <div class="w3-row-padding w3-center w3-section">
+
+        <div class="w3-col m3">
+            <img src="https://lh3.googleusercontent.com/pw/ABLVV84XKIP4wbLWJFPQTmOmv7a1ttt-IaMVmk6kj7mM5TtHOjTW9VRgOQDshTQii5pBO_bfZ77n5uFLsl_mzmItUfor_YCS0_mqzkbc8n_OKJm5-WEk-gXb2YK5S1a4jQab7S51yRovVyUKRELnkLmmXbeE=w1188-h1582-s-no-gm?authuser=0" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="The needle">
+        </div>
+
+        <div class="w3-col m3">
+            <img src="https://lh3.googleusercontent.com/pw/ABLVV844PZGi9FibNlLDRRcOnSn3HsYb-aa1G8OUmb9ExACczWhPelI1CmT3LL04ZgJ6lk27t_egVuNIOj3dVN-98q-02-Fq4Fw0hX-8mXd7HelnSNw-BMmgCEeHo5VAgrT4uv_SG8-pOLjb59vu_PCyV04W=w2106-h1582-s-no-gm?authuser=0" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Long ass day">
+        </div>
+
+        <div class="w3-col m3">
+            <img src="https://lh3.googleusercontent.com/pw/ABLVV86-D3QfjKM4v2yKYZDJSCPIxzP36U9lbXzz2F9MUgwmXNg24MkXeG2YpTl5dVvv24d9leTDwivKZV8P8zFwAMHZrJgP7Iglxl78tLI3URhvC_cS3j3-BAyG1WJV7gHToRj7nBDS2k8-NnVZ9yIzXYy_=w1188-h1582-s-no-gm?authuser=0" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Let there be light">
+        </div>
+
+        <div class="w3-col m3">
+            <img src="https://lh3.googleusercontent.com/pw/ABLVV84ELQSw4iaYq7IN6SiGXE5uYQRwdBWAKA-2VfvrQfe7an1_NP8CD4X7kkChlWgQDd3MePoBebv2mf7f0JgEuP0ZV8ne6w4UFdn9b0-aTS5idBWyQexZD9ghkmhafks_A892XNmbz40mAkRyMRs3i07R=w2106-h1582-s-no-gm?authuser=0" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="The 5th guy">
+        </div>
+
+    </div>
+
+    <div class="w3-row-padding w3-center w3-section">
+
+        <div class="w3-col m3">
+            <img src="https://lh3.googleusercontent.com/pw/ABLVV85kyZub6oKWh9BCbNq4c_2VdmQRP8QSMC2Y5BpkhJvG1G4EuBDh1sXHNFtGO_7sWJ77eNdLBzW1oYgTi7M1uSWqkDworrKs9tcVsUb70Bo9MCmEWChwv4QaQrlYiTy_7xiOgFhfeZex_KCmxevLuYaI=w2108-h1582-s-no-gm?authuser=0" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="The coat">
+        </div>
+
+        <div class="w3-col m3">
+            <img src="https://lh3.googleusercontent.com/pw/ABLVV84vRBk8CvjvWUOPPZtIEJgmkpAZ7MAgvQaFKzrDwWdFp7RS8yBDjolU35qB5YzvXaZ05BB6ENQZmYLdFZu_zvPy0r0mOiZMnKB_AW7m-23QD4pRpZbe_ZFBZvbDDwhZaBH8S6Y6G9jbwPt4FnvMG1AP=w2106-h1582-s-no-gm?authuser=0" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Shades">
+        </div>
+
+        <div class="w3-col m3">
+            <img src="https://lh3.googleusercontent.com/pw/ABLVV86Yz41qzX5CaIAFF-PzMdmFi3wWN67ycrImjD7UVMoBQ9fW4mdSmSlcVuLRMd-kqc34vPVvECDPKxvUCLg-B2e11OCOZkEHER60E9majD8Gvs7YAtZgpmdrIlIQbOoFHJ0zraZh00Hogal-6ek2P4ee=w2106-h1582-s-no-gm?authuser=0" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Leather">
+        </div>
+
+        <div class="w3-col m3">
+            <img src="https://lh3.googleusercontent.com/pw/ABLVV85rkzE8dILFu4GV4fUgT2TyGVViCWPgoTPi-VODcQlC8yB65l7xMyFl0JKGPXylpkFR23hxZetiWIkEQOMfyp6gHJm8Alk1X_11bCVeXoM4y1r9a5MB3YtWCZ2aYyWD4a23B16dDcXErjUSXGeijUuQ=w2106-h1582-s-no-gm?authuser=0" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="The photo">
+        </div>
+
+    </div>
+
+    <div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+        <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image"><i class="fa fa-remove"></i></span>
+        <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+          <img id="img01" class="w3-image">
+          <p id="caption" class="w3-opacity w3-large"></p>
+        </div>
+    </div>
+
+    <div class="bgimg-3 w3-display-container w3-opacity-min">
+        <div class="w3-display-middle">
+           <span class="w3-xxlarge w3-text-white w3-wide">CONTACT</span>
+        </div>
+    </div>
+
+    <div class="w3-content w3-container w3-padding-64" id="contact">
+        <p class="w3-center"><em>I'd love your feedback!</em></p>
+      
+        <div class="w3-row w3-padding-32 w3-section">
+          <div class="w3-col m4 w3-container">
+            <img src="https://img.freepik.com/free-vector/grey-world-map_1053-431.jpg?w=1380&t=st=1708628871~exp=1708629471~hmac=547ff5fbc38994f225d1286297b4dc6406f27d77ba2471beba8535b32eea3436" class="w3-image w3-round" style="width:100%">
+          </div>
+          <div class="w3-col m8 w3-panel">
+            <div class="w3-large w3-margin-bottom">
+              <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Tuomala, FIN<br>
+              <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Phone: +358********<br>
+              <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email: ossi.weck@gmail.com<br>
+            </div>
+            <p>Swing by for a cup of <i class="fa fa-coffee"></i>, or leave me a note:</p>
+            <form action="/action_page.php" target="_blank">
+              <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+                <div class="w3-half">
+                  <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
+                </div>
+                <div class="w3-half">
+                  <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
+                </div>
+              </div>
+              <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
+              <button class="w3-button w3-black w3-right w3-section" type="submit">
+                <i class="fa fa-paper-plane"></i> SEND MESSAGE
+              </button>
+            </form>
+          </div>
+        </div>
+    </div>
+      
+
+    <footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
+        <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+        <div class="w3-xlarge w3-section">
+          <i class="fa fa-facebook-official w3-hover-opacity"></i>
+          <i class="fa fa-instagram w3-hover-opacity"></i>
+          <i class="fa fa-twitter w3-hover-opacity"></i>
+          <i class="fa fa-linkedin w3-hover-opacity"></i>
+        </div>
+        <p>Ossi Weck <a title="W3.CSS" target="_blank" class="w3-hover-text-green"></a></p>
+    </footer>
+
+    <script>
+        // Modal Image Gallery
+        function onClick(element) {
+          document.getElementById("img01").src = element.src;
+          document.getElementById("modal01").style.display = "block";
+          var captionText = document.getElementById("caption");
+          captionText.innerHTML = element.alt;
+        }
+        
+        // Change style of navbar on scroll
+        window.onscroll = function() {myFunction()};
+        function myFunction() {
+            var navbar = document.getElementById("myNavbar");
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
+            } else {
+                navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
+            }
+        }
+        
+        // Used to toggle the menu on small screens when clicking on the menu button
+        function toggleFunction() {
+            var x = document.getElementById("navDemo");
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+            } else {
+                x.className = x.className.replace(" w3-show", "");
+            }
+        }
+    </script>
+
+    
+</body>
+</html>
