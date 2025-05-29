@@ -193,8 +193,16 @@
                 <label for="message">Message:</label><br>
                 <textarea id="message" name="message" rows="4" cols="40" required></textarea><br><br>
         
-                <button type="submit">Send</button>
+                <button type="submit">Send</button><br><br>
+
+              
               </form>
+
+              <div id="guestbook-container">
+                
+                <a href="#" onclick="loadGuestbook(); return false;">Show messages</a>
+                <div id="guestbook-messages"></div>
+              </div>
 
          
             </div>
@@ -240,6 +248,19 @@
             } else {
                 x.className = x.className.replace(" w3-show", "");
             }
+        }
+
+        // Lähetettyjen terveisten hakemisen scripti
+        function loadGuestbook() {
+          fetch('guestbook.php')
+             .then(response => response.text())
+             .then(data => {
+              document.getElementById('guestbook-messages').innerHTML = data;
+            })
+            .catch(error => {
+              console.error('Virhe ladattaessa vieraskirjaa:', error);
+              document.getElementById('guestbook-messages').innerText = "Viestien lataus epäonnistui.";
+            });
         }
     </script>
 
